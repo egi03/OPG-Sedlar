@@ -3,15 +3,34 @@
   top: 0;
   display: flex;
   justify-content: space-between; /* Separate the image and links */
-  align-items: center; /* Vertically align items */
+  align-items: center; 
   background-color: #18322e;
   padding: 0 16px; /* Add horizontal padding for spacing */
 }
 
 #tractor-logo {
-  height: 4rem; /* Adjust the height to match your design */
+  height: 4rem;
   vertical-align: middle;
+  transition: 0.3s ease;
 }
+
+#tractor-logo:hover {
+  transform: rotate(20deg) scale(1.1); /* Rotate and slightly enlarge the logo */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#tractor-logo:hover {
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
 
 #navbar a {
   display: block;
