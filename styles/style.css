@@ -1,0 +1,33 @@
+/* Add this to your existing CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    background-color: #18322e;
+    margin: 0;
+    font-size: 28px;
+    font-family: Rubik;
+    color: white;
+}
+  
+
+
+.blur {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out;
+  }
+  
+#page-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: rgba(0, 0, 0, 0.4); /* Optional: to dim the background */
+z-index: 10;
+display: none;
+}
+
+#page-overlay.active {
+display: block;
+}

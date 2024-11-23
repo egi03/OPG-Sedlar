@@ -1,0 +1,60 @@
+#navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between; /* Separate the image and links */
+  align-items: center; /* Vertically align items */
+  background-color: #18322e;
+  padding: 0 16px; /* Add horizontal padding for spacing */
+}
+
+#tractor-logo {
+  height: 4rem; /* Adjust the height to match your design */
+  vertical-align: middle;
+}
+
+#navbar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4rem;
+}
+
+/* From w3resources.com */
+.hover-underline-animation {
+  display: inline-block; /* Display inline block */
+  position: relative; /* Set position relative */
+  color: 
+#abab59; /* Set text color */
+}
+
+.hover-underline-animation:after {
+  content: ''; /* Add content after the element */
+  position: absolute; /* Position absolute for pseudo-element */
+  width: 100%; /* Full width */
+  transform: scaleX(0); /* Initial scale of 0 for underline effect */
+  height: 2px; /* Height of the underline */
+  bottom: 0; /* Align to bottom */
+  left: 0; /* Align to left */
+  background-color: 
+  #abab59; /* Background color of the underline */
+  transform-origin: bottom right; /* Set transform origin */
+  transition: transform 0.25s ease-out; /* Transition effect for the underline */
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1); /* Scale the underline on hover */
+  transform-origin: bottom left; /* Set transform origin */
+}
