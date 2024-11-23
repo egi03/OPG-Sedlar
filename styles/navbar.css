@@ -42,7 +42,8 @@
 }
 
 #navbar a.active {
-  background-color: #04AA6D;
+  text-decoration: underline #abab59;
+  text-underline-offset: 1rem;
   color: white;
 }
 
