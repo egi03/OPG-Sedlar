@@ -19,6 +19,21 @@ body {
   text-align: center;
 }
 
+
+#welcome-text{
+  font-size: 7rem;
+  font-weight: bold;
+  color: #f2f2f2;
+}
+
+#opg-text {
+  color: transparent; /* Makes the inside of the text transparent */
+  -webkit-text-stroke: 3px white; /* Creates a white border around the text */
+  font-weight: bold; /* Optional: Enhances the appearance of the border */
+  font-size: 11rem;
+}
+
+
 ::selection {
   color: #0c201c;
   background: #e8b3ba;
