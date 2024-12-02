@@ -1,5 +1,3 @@
-/* Add this to your existing CSS */
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
@@ -9,25 +7,29 @@ body {
     font-family: Rubik;
     color: white;
 }
-  
 
 
-.blur {
-    filter: blur(5px);
-    transition: filter 0.3s ease-in-out;
-  }
-  
-#page-overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100vw;
-height: 100vh;
-background: rgba(0, 0, 0, 0.4); /* Optional: to dim the background */
-z-index: 10;
-display: none;
+.header{
+  padding: 2%;
+  text-align: center;
+  color: white;
 }
 
-#page-overlay.active {
-display: block;
+#fact{
+  text-align: center;
+}
+
+::selection {
+  color: #0c201c;
+  background: #e8b3ba;
+}
+
+#backgroundVideo {
+  position: absolute; /* Ensures it can stretch to cover the page */
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust to the full width of the page */
+  height: 100%; /* Adjust to the full height of the page */
+  object-fit: cover; /* Ensures the video scales to cover the area without distortion */
+  z-index: -1; /* Keeps the video in the background */
 }
