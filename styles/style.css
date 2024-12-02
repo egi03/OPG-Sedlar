@@ -24,12 +24,13 @@ body {
   background: #e8b3ba;
 }
 
-#backgroundVideo {
+.backgroundVideo {
   position: absolute; /* Ensures it can stretch to cover the page */
   top: 0;
   left: 0;
-  width: 100%; /* Adjust to the full width of the page */
-  height: 100%; /* Adjust to the full height of the page */
+  width: 100%; 
+  height: 100%; 
   object-fit: cover; /* Ensures the video scales to cover the area without distortion */
-  z-index: -1; /* Keeps the video in the background */
+  filter: brightness(25%);
+  z-index: -1; 
 }

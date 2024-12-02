@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between; /* Separate the image and links */
   align-items: center; 
-  background-color: #18322e;
   padding: 0 16px; /* Add horizontal padding for spacing */
 }
 
