@@ -26,12 +26,16 @@ body {
 }
 
 #opg-text {
-  color: transparent; /* Makes the inside of the text transparent */
-  -webkit-text-stroke: 3px white; /* Creates a white border around the text */
+  -webkit-text-stroke: 3px white;
   font-weight: bold;
   font-size: 11rem;
 }
 
+.transparent-text{
+  color: transparent; /* Makes the inside of the text transparent */
+  -webkit-text-stroke: 1px white; /* Creates a white border around the text */
+
+}
 
 ::selection {
   color: #0c201c;
