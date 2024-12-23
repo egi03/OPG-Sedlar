@@ -1,0 +1,18 @@
+#members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.member-card {
+    background-color: #ffffff52;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 3%;
+    padding: 20px;
+    width: calc(30% - 20px); /* 2 cards per row */
+    box-sizing: border-box;
+    text-align: center;
+}
