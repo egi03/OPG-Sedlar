@@ -98,6 +98,52 @@ let questions = [
             { text: "Plodored", correct: false }
         ]
     }
+,
+{
+    question: "Koji je glavni uzrok kiselosti tla?",
+    answers: [
+        { text: "Prekomjerna upotreba gnojiva", correct: true },
+        { text: "Sadnja drveća", correct: false },
+        { text: "Navodnjavanje", correct: false },
+        { text: "Korištenje komposta", correct: false }
+    ]
+},
+{
+    question: "Koja je najvažnija mikroelement za rast biljaka?",
+    answers: [
+        { text: "Željezo", correct: true },
+        { text: "Kalcij", correct: false },
+        { text: "Magnezij", correct: false },
+        { text: "Sumpor", correct: false }
+    ]
+},
+{
+    question: "Koji je najbolji način za poboljšanje strukture tla?",
+    answers: [
+        { text: "Dodavanje pijeska", correct: false },
+        { text: "Dodavanje organske tvari", correct: true },
+        { text: "Navodnjavanje", correct: false },
+        { text: "Sadnja drveća", correct: false }
+    ]
+},
+{
+    question: "Koji je glavni uzrok zbijanja tla?",
+    answers: [
+        { text: "Teška mehanizacija", correct: true },
+        { text: "Navodnjavanje", correct: false },
+        { text: "Sadnja usjeva", correct: false },
+        { text: "Uporaba komposta", correct: false }
+    ]
+},
+{
+    question: "Koji je najbolji način za očuvanje vlage u tlu?",
+    answers: [
+        { text: "Navodnjavanje", correct: false },
+        { text: "Malčiranje", correct: true },
+        { text: "Sadnja drveća", correct: false },
+        { text: "Uporaba gnojiva", correct: false }
+    ]
+}
 ]
 
 const startBtn = document.getElementById("start-quiz");
@@ -137,7 +183,6 @@ function getRandomQuestionsIndexes(){
     }
     console.log(selectedQuestions);
     return selectedQuestions;
-
 }
 
 function startQuiz(){
@@ -161,22 +206,33 @@ function showQuestion(questionIndex){
 }
 
 function selectAnswer(){
+    Array.from(answerButtons.children).forEach(button => {
+        button.classList.add("disabled");
+    });
+
     if (this.dataset.correct) {
         score++;
-    }
-    answerButtons.innerHTML = "";
-    currentQuestionIndex++;
-    if(currentQuestionIndex === 5){
-        displayEndScreen();
+        this.classList.add("correct");
     }
     else{
-
-        showQuestion(questionsIndexes[currentQuestionIndex]);
+        console.log("Wrong answer");
+        this.classList.add("incorrect");
     }
+
+    setTimeout(() => {
+        answerButtons.innerHTML = "";
+        currentQuestionIndex++;
+        if(currentQuestionIndex === 5){
+            displayEndScreen();
+        }
+        else{
+            showQuestion(questionsIndexes[currentQuestionIndex]);
+        }
+    }, 1000);
 }
 
 function displayEndScreen(){
-    document.getElementById("final-score").innerText = `Vaš rezultat je: ${score}/5`;
+    document.getElementById("final-score").innerHTML = `Vaš rezultat je: <br> ${score}/5`;
     quizContainer.classList.add("hidden");
     endScreen.classList.remove("hidden");
 }

@@ -42,7 +42,7 @@
 }
 
 .answer-btn{
-    background-color: rgba(255, 255, 255, 0.664);
+    background: linear-gradient(#a19f9f, #cccde0);;
     color: #000000;
     font-weight: bold;
     width: 50%;
@@ -65,10 +65,31 @@
 }
 
 .answer-btn:hover{
-    background-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.747);
 }
 
 
 .hidden{
     display: none;
+}
+
+.correct
+{
+  background: #4B6F44;
+}
+
+.incorrect
+{
+  background: #C60C30;
+}
+
+.disabled{
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+}
+
+#final-score{
+    text-align: center;
+    padding: 1%;
+    margin: 1%;
 }
