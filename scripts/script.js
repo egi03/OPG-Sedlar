@@ -14,7 +14,11 @@ const randomFact = () => {
     return healthFacts[randomIndex];
 };
 
+const factElement = document.getElementById("fact");
+
 document.addEventListener("DOMContentLoaded", () => {
-    const factElement = document.getElementById("fact");
-    factElement.textContent = randomFact();
+    if(factElement !== null){
+        factElement.textContent = randomFact();
+    }
+
 })
