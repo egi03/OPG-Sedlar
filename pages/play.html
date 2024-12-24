@@ -7,6 +7,7 @@
     <title>OPG Sedlar</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/play_page.css">
 </head>
 <body>
     <video autoplay muted loop class="backgroundVideo">
@@ -26,13 +27,24 @@
           <a href="contact.html" class="hover-underline-animation">Kontakt</a>
         </div>
       </div>
+
+      <div id="end-screen" class="hidden end-screen">
+        <h1 id="final-score">Vaš rezultat: 0</h1> <br><br>
+        <button id="restart-button" class="big-button">Ponovno igraj</button>
+
+      </div>
+
+      <button id="start-quiz" class="big-button">Pokreni kviz</button>
+
+      <div id="quiz-container-id" class="hidden">
+          <h2 id="question-text">PITANJE PITANJ E PITNJE</h2>
+          <div id="answer-container">
+
+          </div>
+      </div>
       
 
 
-    <footer>
-        <p>&copy; 2024 OPG Sedlar</p>
-    </footer>
-
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/quiz.js"></script>
 </body>
 </html>
