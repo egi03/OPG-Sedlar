@@ -205,7 +205,7 @@ function showQuestion(questionIndex){
     });
 }
 
-function selectAnswer(){
+async function selectAnswer(){
     Array.from(answerButtons.children).forEach(button => {
         button.classList.add("disabled");
     });
@@ -215,8 +215,13 @@ function selectAnswer(){
         this.classList.add("correct");
     }
     else{
-        console.log("Wrong answer");
         this.classList.add("incorrect");
+
+        Array.from(answerButtons.children).forEach(button => {
+            if (button.dataset.correct) {
+            button.classList.add("correct");
+            }
+        });
     }
 
     setTimeout(() => {
