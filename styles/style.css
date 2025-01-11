@@ -3,7 +3,7 @@
 body {
     background-color: #18322e;
     margin: 0;
-    font-size: 28px;
+    font-size: 3vh;
     font-family: Rubik;
     color: white;
 }
@@ -20,15 +20,15 @@ body {
 
 
 #welcome-text{
-  font-size: 6rem;
+  font-size: 8vw;
   font-weight: bold;
   color: #f2f2f2;
 }
 
 #opg-text {
-  -webkit-text-stroke: 3px white;
+  -webkit-text-stroke: 2px white;
   font-weight: bold;
-  font-size: 11rem;
+  font-size: 15vw;
 }
 
 .transparent-text{
@@ -43,12 +43,24 @@ body {
 }
 
 .backgroundVideo {
-  position: fixed; /* stay in position while page content is scorlling */
+  position: fixed; /* Keeps video in the same position */
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover; /* stretch video to fit whole page */
+  width: 100%; /* Ensures the video spans the full width */
+  height: 100%; /* Ensures the video spans the full height */
+  object-fit: cover; /* Ensures the video covers the entire area */
   filter: brightness(25%);
   z-index: -1;
+}
+
+@media (max-width: 768px) {
+  body{
+    font-size: 2.5vh;
+  }
+}
+
+@media (max-width: 480px) {
+  body{
+    font-size: 1.5vh;
+  }
 }

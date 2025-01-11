@@ -189,7 +189,9 @@ function startQuiz(){
     showQuestion(questionsIndexes[currentQuestionIndex]);
 }
 
-function showQuestion(questionIndex){
+function showQuestion(questionIndex) {
+    answerButtons.innerHTML = "";
+
     let question = questions[questionIndex];
     questionTextDiv.innerText = question.question;
 
@@ -197,11 +199,11 @@ function showQuestion(questionIndex){
         const button = document.createElement("button");
         button.innerText = answer.text;
         button.classList.add("answer-btn");
-        answerButtons.appendChild(button);
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer);
+        answerButtons.appendChild(button);
     });
 }
 
