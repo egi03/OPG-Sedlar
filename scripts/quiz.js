@@ -170,6 +170,7 @@ restartBtn.addEventListener("click", () => {
     while(answerButtons.firstChild){
         answerButtons.removeChild(answerButtons.firstChild);
     }
+    questionsIndexes = getRandomQuestionsIndexes()
     startQuiz();
 });
 
