@@ -40,6 +40,10 @@ body {
   background: #e8b3ba;
 }
 
+footer{
+  bottom: 0;
+}
+
 .backgroundVideo {
   position: fixed; /* Keeps video in the same position */
   top: 0;
